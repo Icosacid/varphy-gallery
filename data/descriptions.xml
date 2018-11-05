@@ -34,13 +34,16 @@
 	
 	<description art-index="4">
 		<title>Laplacian Sunrise</title>
-		<content>Sunrise over a world of particles driven by magnetic field force.</content>
+		<content>Sunrise over a world of particles driven by magnetic field force.
+		
+		The Laplacian force is a cross product between a particle speed and the local magnetic field. This purely rotative motion results in a particle hurricane. At times, some get stuck between opposite intensity gradients. This natural angle-dependent dipolar magnetic confinement phenomenon forces the particle to draw over and over at the same positions, painting sparkles of reflection.</content>
 		<image>img/gallery/4.png</image>
 	</description>
 	
 	<description art-index="5">
 		<title>L'Oeil de Dérive</title>
 		<content>L'apparente nature uniforme de la colonne de plasma révèle en fait des ondes de dérive, tourbillons spontanés qui enroulent le plasma en une conformation hélicoïdale.
+		
 		Réalisé uniquement avec des triangles.</content>
 		<image>img/gallery/5.png</image>
 	</description>

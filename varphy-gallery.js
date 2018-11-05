@@ -6,6 +6,76 @@
  */
 
 var switchTimeMS = 30000;// 30 seconds
+var descriptions = [];
+
+var LoadScreen = {};
+LoadScreen.start = function() {
+	this.total = undefined;
+	this.nbLoaded = 0;
+
+	// Load all JSONified XML data into descriptions array
+	jQuery
+		.get("data/descriptions.xml", {})
+		.done(function(data) {
+
+			var jDescs = jQuery(data).find('descriptions');
+
+			jDescs.find('description').each(function(index) {
+				var titleText = jQuery(this).find('title').text();
+				var contentText = jQuery(this).find('content').text();
+				var imageSrc = jQuery(this).find('image').text();
+
+				var desc = {
+					title: titleText,
+					content: contentText,
+					image: imageSrc
+				};
+
+				descriptions.push(desc);
+			});
+
+			LoadScreen.preload();
+		});
+
+	this.preload = function() {
+		// Now pre-load all pictures
+		this.total = descriptions.length;
+		jQuery('.loadscreen .toload').html(this.total);
+
+		var imageObjects = [];
+
+		descriptions.forEach(function(el) {
+			imageObjects.push(new Image());
+		});
+
+		imageObjects.forEach(function(el, i) {
+			el.onload = function() {
+				setTimeout(LoadScreen.onStepLoad, 1500 * Math.random());
+			};
+			el.src = descriptions[i].image;
+		});
+	};
+};
+LoadScreen.onStepLoad = function() {
+	LoadScreen.nbLoaded++;
+
+	// Update DOM
+	jQuery('.loadscreen .loaded').html(LoadScreen.nbLoaded);
+
+	// Fade out if loading complete
+	if (LoadScreen.nbLoaded == LoadScreen.total) {
+		jQuery('.loadscreen .loadingtext').html("Loading complete");
+		jQuery('.loadscreen').fadeOut(2000);
+
+		LoadScreen.onComplete();
+	}
+};
+LoadScreen.onComplete = function() {
+	// Start all app loops
+	Varphyloader.boot();
+	GalleryRotate.boot();
+	Klok.boot();
+};
 
 var Varphyloader = {}; // Particle systems and drawing
 
@@ -17,10 +87,6 @@ Varphyloader.boot = function() {
 	Varphyloader.frame = function() {
 		Varphyloader.update();
 		Varphyloader.anim = window.requestAnimationFrame(Varphyloader.frame);
-		if (Varphyloader.killGame) {
-			window.cancelAnimationFrame(Varphyloader.anim);
-			return false;
-		}
 	};
 	
 	Varphyloader.showFilmLoader = false;
@@ -75,32 +141,7 @@ Varphyloader.update = function() {
 
 var GalleryRotate = {};
 GalleryRotate.boot = function() {
-	this.descs = [];
-	
-	// Load all
-	jQuery
-	.get("data/descriptions.xml", {})
-	.done(function(data) {
-	
-		var jDescs = jQuery(data).find('descriptions');
-		
-		jDescs.find('description').each(function(index) {
-			var titleText = jQuery(this).find('title').text();
-			var contentText = jQuery(this).find('content').text();
-			var imageSrc = jQuery(this).find('image').text();
-			
-			var desc = {
-				title: titleText,
-				content: contentText,
-				image: imageSrc
-			};
-			
-			GalleryRotate.descs.push(desc);
-		});
-		
-		GalleryRotate.setup();
-	});
-	
+	GalleryRotate.setup();
 };
 GalleryRotate.setup = function() {
 	// Start anim
@@ -135,7 +176,7 @@ GalleryRotate.update = function(stepCount) {
 	console.log('stepCount', stepCount, 'index', index);
 	
 	// Inject first
-	var desc = this.descs[index];
+	var desc = descriptions[index];
 	
 	// Image
 	jQuery('.preview img').attr('src', '');
@@ -209,7 +250,5 @@ Klok.update = function() {
 };
 
 jQuery(document).ready(function() {
-	Varphyloader.boot();
-	GalleryRotate.boot();
-	Klok.boot();
+	LoadScreen.start();
 });
