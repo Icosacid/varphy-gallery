@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<descriptions>
+	<!-- Personal note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
+	<!-- HTML entity for line feed: &#10; -->
+
+	<description art-index="1">
+		<title>Offset</title>
+		<content>Histoire pointilliste d'un nuage de particules soumis à un attracteur gravitationnel en mouvement linéaire impossible, légèrement assymétrique.
+		
+		L'attracteur a se déplace selon la loi a.x = a.y = a.z = K sin(t/T), les 196 particules sont initialisées de façon équirépartie en coordonnées sphériques et avec une vitesse identique selon l'axe Y.
+		Les dégradés de couleur évoquent la chaleur supérieure à l'intérieur d'un système gravitationnel dense. L'assymétrie de la source se perçoit légèrement sur les trajectoires extérieures, ce qui représente un nouvel élan : l'introduction de cassures de symétrie pour rechercher d'autres formes d'équilibre esthétique.</content>
+		<image>img/gallery/1.png</image>
+	</description>
+	
+	<description art-index="2">
+		<title>The Momentum Parade</title>
+		<content>A rotating galaxy emits stardust particles. Under the gravitational force of an invisible attractor, their trails depict a gigantic orb of possibilities.
+		
+		Born from the radial ejection of a rotating galaxy, particles pay a tribute to their origins by replicating a momentum of their own throughout their lives. Some leave more impact on the universe than others, but they all end up extinct. The overall shape of the population is richer than all the individual paths taken separately, regardless of how glorious they may have been.</content>
+		<image>img/gallery/2.png</image>
+	</description>
+	
+	<description art-index="3">
+		<title>La Course de l'Etoile Double</title>
+		<content>Les deux âmes de l'étoile double chutent vers l'infini. Une planète, léger spectateur, semble suivre avec curiosité leur valse gravitationnelle.
+		
+		Eprises d'un amour aveugle et symétrique, la danse des deux parties de l'étoile double évolue vers des mouvements de plus en plus amples. A l'apogée de cette tempête, le trait se grossit. Les étoiles ne sont plus sur le même plan.
+		
+		La planète, aux premières loges de leurs déboires, passe inaperçue. Elle représente cependant l'espoir et le futur ; une bienveillance perpetuelle dans la trame de l'histoire de l'étoile double.
+		
+		La capture de l'oeuvre est en réalité arrêtée avant la fin, qui dissimule un événement tragique où l'une des deux étoiles approche de trop près l'objectif, peignant une couche de noire grossissante et grossière sur la totalité de l'espace. Au-delà ce choix technique qui a constitué la plus grande difficulté à la réalisation de cette oeuvre, l'artiste choisit ici de ne garder que la beauté d'une histoire.</content>
+		<image>img/gallery/3.png</image>
+	</description>
+	
+	<description art-index="4">
+		<title>Laplacian Sunrise</title>
+		<content>Sunrise over a world of particles driven by magnetic field force.</content>
+		<image>img/gallery/4.png</image>
+	</description>
+	
+	<description art-index="5">
+		<title>L'Oeil de Dérive</title>
+		<content>L'apparente nature uniforme de la colonne de plasma révèle en fait des ondes de dérive, tourbillons spontanés qui enroulent le plasma en une conformation hélicoïdale.
+		Réalisé uniquement avec des triangles.</content>
+		<image>img/gallery/5.png</image>
+	</description>
+	
+	<description art-index="6">
+		<title>The Lagrangian Exploration Module</title>
+		<content>Irregular icosahedron for particles observation.
+		
+		At the center is a chosen polyhedron born out of a creation machine. The icosahedron is randomly generated and different each time. Particles move from one vertex to the other with a specific bouncing probability in space and a selected number of closest neighbours. Particles are bound to their targets with spring force and viscosity. This artwork represents the LEM, and the observation of a single particle along the icosahedron surface - mostly edges but not only - which motion generates the outer radial structure.
+		
+		Also, the neat structure of the icosahedron contrasts with the chosen drawing technique: dots. The same goes with the single particle which in reality is a tiny sphere but here revealed with sharp lines.</content>
+		<image>img/gallery/6.png</image>
+	</description>
+	
+	<description art-index="7">
+		<title>Rupture</title>
+		<content>Interprétation libre.</content>
+		<image>img/gallery/7.png</image>
+	</description>
+	
+	<description art-index="8">
+		<title>Magnetosphere 210</title>
+		<content>A cloud of particles explodes in the empty space. Nothing but a dipolar magnetic field. The neon beams represent the travel volume of plasma particles within a lone magnetosphere.
+		
+		The intersection of those field tubes with the atmosphere is what causes aurorae at high latitudes. On Jupiter, each Gallilean satellite has its own plasma tube in direct connection with the planet poles. Aurora spots have been observed at the very same polar angle than their corresponding revolving satellites.</content>
+		<image>img/gallery/8.png</image>
+	</description>
+	
+</descriptions>

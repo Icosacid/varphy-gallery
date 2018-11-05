@@ -1,0 +1,147 @@
+/**
+ * CSS for Varphy Gallery
+ *
+ * @author Alexandrix <alex@alexandrix.com>
+ * @since 2018-10-24
+ */
+
+* {
+	margin: 0;
+	border: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Raleway Thin', sans-serif;
+	color: white;
+}
+p, a, button, input {
+	font-family: 'Raleway Light', sans-serif;
+	color: white;
+}
+html,
+body {
+	background: #000;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+body { }
+.marjinoto {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	margin: auto;
+}
+/* Flexbox helpers */
+.flexcol {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    .ie & > * {
+        width: 100%; // For IE11
+    }
+}
+.flexrow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.flexwrap {
+    flex-wrap: wrap;
+}
+.flexcenter {
+    /* Centers child elements */
+    justify-content: center;
+}
+.flexbetween {
+    /* Max space between child elements */
+    justify-content: space-between;
+}
+.flexstart {
+    /* Pull to left or top */
+    justify-content: flex-start;
+}
+.flexend {
+    /* Pull to right or bottom */
+    justify-content: flex-end;
+}
+.flexchildrenend {
+    /* Children are self-aligned to bottom line / rightmost line */
+    align-items: flex-end;
+}
+
+.main {
+	background: black;
+}
+h1 {
+	padding: 30px 20px 20px;
+	font-size: 3rem;
+	font-weight: 100;
+}
+.gallery {
+	background: url("img/gallery/darkerwood.jpg");
+    background-size: auto auto;
+	background-size: 100% 100%;
+	font-size: 0;
+	white-space: nowrap;
+}
+.gallery .left,
+.gallery .right {
+	//display: inline-block;
+	//vertical-align: middle;
+	//width: 50%;
+	font-size: 1rem;
+}
+.gallery .left {
+	border-right: solid 2px rgba(255,255,255,0.2);//#aaa;//#888;
+}
+.gallery .right {
+	padding-left: 20px;
+	height: 100vh;
+	//width: calc(100vw - 21/29.7 * 100vh);
+	width: calc(100vw - 90vh);
+	position: relative;
+}
+.gallery .right .description {
+	padding: 30px;
+	white-space: pre-line;
+}
+.gallery .preview {
+	
+}
+.gallery .preview img {
+	height: 100vh;
+}
+.gallery .right .clock {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	cursor: help;
+}
+.gallery .right .clock p.justgottapress {
+	margin-left: 7px;
+	opacity: 0;
+	transition: opacity 500ms;
+}
+.gallery .right .clock:hover p.justgottapress {
+	margin-left: 7px;
+	opacity: 0.6;
+}
+.filmloader {
+	position: absolute;
+	bottom: 20px;
+	right: 60px;
+	display: none;
+}
+.filmloader h6 {
+	text-align: center;
+	font-size: 2rem;
+	animation: beat 1s alternate infinite;
+	padding-top: 30px;
+	font-weight: 200;
+}
+@keyframes beat {
+	from { opacity: 0.6; }
+	to { opacity: 1; }
+}
